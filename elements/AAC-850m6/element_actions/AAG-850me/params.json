@@ -1,0 +1,12 @@
+{
+    "caption": "Connect to a websocket",
+    "fields": {
+        "AAH": {
+            "caption": "Websocket Url",
+            "editor": "DynamicValue",
+            "name": "websocket_url",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}
