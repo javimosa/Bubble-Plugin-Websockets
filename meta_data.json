@@ -1,4 +1,8 @@
 {
+    "categories": {
+        "0": "technical"
+    },
+    "description": "This app enables using websockets(client) in bubble.io",
     "license": "private",
     "name": "Websockets"
 }

@@ -1,3 +1,7 @@
 function(instance, properties, context) {
- 	instance.data.socket.send(properties.message);
+    if (instance.data.socket.readyState !== WebSocket.CLOSED && socket.readyState !== WebSocket.CLOSING) {
+    	 	instance.data.socket.send(properties.message);
+    } else {
+        console.log("Websocket already closed");
+    }
 }

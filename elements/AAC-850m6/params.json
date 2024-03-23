@@ -2,8 +2,8 @@
     "add_is_visible": true,
     "category": "visual elements",
     "default_dim": {
-        "height": 200,
-        "width": 400
+        "height": 40,
+        "width": 40
     },
     "display": "Websocket",
     "events": {
@@ -24,14 +24,10 @@
             "name": "an_error_has_ocurred"
         }
     },
-    "fields": {
-        "AAD": {
-            "caption": "Websocket Url",
-            "name": "websocket_url",
-            "rank": 0
-        }
-    },
     "icon": "ion-android-wifi",
+    "property_applications": {
+        "resizable": true
+    },
     "states": {
         "AAQ": {
             "caption": "message received",
@@ -39,6 +35,14 @@
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
             "name": "message_received",
+            "value": "text"
+        },
+        "AAR": {
+            "caption": "connection_state",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "connection_state",
             "value": "text"
         }
     }

@@ -2,11 +2,13 @@ function(instance, properties, context) {
     
   const socketUrl = properties.websocket_url;
   const socket = new WebSocket(socketUrl);
+  instance.publishState("connection_state", "connecting")
 
   socket.onopen = function (event) {
     console.log("WebSocket connection established.");
     instance.data.socket = socket;
     instance.triggerEvent("connected")
+    instance.publishState("connection_state", "connected")
 
   };
 
@@ -20,6 +22,7 @@ function(instance, properties, context) {
   socket.onclose = function (event) {
     console.log("WebSocket connection closed.");
     instance.triggerEvent("closed")
+    instance.publishState("connection_state", "closed")
   };
 
   // Event: When an error occurs
